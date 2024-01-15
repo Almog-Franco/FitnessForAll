@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginPage">
+
+    <fragment
+        android:id="@+id/loginPage"
+        android:name="com.example.final_project.LoginPage"
+        android:label="LoginPage" >
+        <action
+            android:id="@+id/action_loginPage_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginPage_to_postLoginPage"
+            app:destination="@id/postLoginPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.final_project.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginPage"
+            app:destination="@id/loginPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/postLoginPage"
+        android:name="com.example.final_project.PostLoginPage"
+        android:label="fragment_post_login_page"
+        tools:layout="@layout/fragment_post_login_page" >
+        <action
+            android:id="@+id/action_postLoginPage_to_loginPage"
+            app:destination="@id/loginPage" />
+        <action
+            android:id="@+id/action_postLoginPage_to_homeWorkoutGear"
+            app:destination="@id/homeWorkoutGear" />
+        <action
+            android:id="@+id/action_postLoginPage_to_findGymNearMe"
+            app:destination="@id/findGymNearMe" />
+        <action
+            android:id="@+id/action_postLoginPage_to_futureWorkout"
+            app:destination="@id/futureWorkout" />
+        <action
+            android:id="@+id/action_postLoginPage_to_challengeFragment"
+            app:destination="@id/challengeFragment" />
+        <action
+            android:id="@+id/action_postLoginPage_to_userDashboard"
+            app:destination="@id/userDashboard" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeWorkoutGear"
+        android:name="com.example.final_project.HomeWorkoutGear"
+        android:label="fragment_home_workout_gear"
+        tools:layout="@layout/fragment_home_workout_gear" >
+        <action
+            android:id="@+id/action_homeWorkoutGear_to_startHomeWorkout"
+            app:destination="@id/startHomeWorkout" />
+    </fragment>
+    <fragment
+        android:id="@+id/findGymNearMe"
+        android:name="com.example.final_project.FindGymNearMe"
+        android:label="fragment_find_gym_near_me"
+        tools:layout="@layout/fragment_find_gym_near_me" >
+        <action
+            android:id="@+id/action_findGymNearMe_to_postLoginPage"
+            app:destination="@id/postLoginPage" />
+        <action
+            android:id="@+id/action_findGymNearMe_to_startGymWorkout"
+            app:destination="@id/startGymWorkout" />
+    </fragment>
+    <fragment
+        android:id="@+id/startGymWorkout"
+        android:name="com.example.final_project.StartGymWorkout"
+        android:label="fragment_start_gym_workout"
+        tools:layout="@layout/fragment_start_gym_workout" >
+        <action
+            android:id="@+id/action_startGymWorkout_to_postLoginPage"
+            app:destination="@id/postLoginPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/futureWorkout"
+        android:name="com.example.final_project.FutureWorkout"
+        android:label="fragment_future_workout"
+        tools:layout="@layout/fragment_future_workout" />
+    <fragment
+        android:id="@+id/startHomeWorkout"
+        android:name="com.example.final_project.StartHomeWorkout"
+        android:label="fragment_start_home_workout"
+        tools:layout="@layout/fragment_start_home_workout" >
+        <action
+            android:id="@+id/action_startHomeWorkout_to_postLoginPage"
+            app:destination="@id/postLoginPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/challengeFragment"
+        android:name="com.example.final_project.ChallengeFragment"
+        android:label="fragment_challenge"
+        tools:layout="@layout/fragment_challenge" >
+        <action
+            android:id="@+id/action_challengeFragment_to_postLoginPage"
+            app:destination="@id/postLoginPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/userDashboard"
+        android:name="com.example.final_project.UserDashboard"
+        android:label="fragment_user_dashboard"
+        tools:layout="@layout/fragment_user_dashboard" >
+        <action
+            android:id="@+id/action_userDashboard_to_postLoginPage"
+            app:destination="@id/postLoginPage" />
+    </fragment>
+</navigation>
